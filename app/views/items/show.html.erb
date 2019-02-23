@@ -1,0 +1,23 @@
+<div class="wrapper">
+	<h1><%= @item.title %></h1>
+		<div class="container">
+			<div class="item-image">
+				<%= image_tag("/#{@item.image_url}", size: "600x400") %>
+				<span class="desc-text"><b>Description :</b> <%= @item.description %></span> 
+			</div>
+
+			<div class="columns">
+				<ul class="price">
+				<li class="header">Notre offre</li>
+				<li class="grey"><%= @item.price %> €</li>
+				<li>Papier glacé</li>
+				<li>Format HD</li>
+				<% if user_signed_in? %>
+					<li class="button"><a href="/item/add/<%= @id_to_send %>" class="button">AJOUTER AU PANIER</a></li>
+				<% else %>
+					<li class="button"><a href="<%= new_user_registration_path %>" class="button">S'INSCRIRE</a></li>
+				<% end %>
+				</ul>
+			</div>
+		</div>
+</div>
