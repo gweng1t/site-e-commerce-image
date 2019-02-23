@@ -17,7 +17,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-Gemfile.lock
+# Gemfile.lock
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
